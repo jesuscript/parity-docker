@@ -1,0 +1,12 @@
+FROM ubuntu:14.04
+
+# install tools and dependencies
+RUN apt-get update
+RUN apt-get install -y curl
+
+RUN curl -L $PARITY_DEB_URL > parity.deb
+RUN dpkg -i parity.deb
+RUN rm parity.deb
+
+
+
