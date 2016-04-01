@@ -4,7 +4,7 @@ FROM ubuntu:14.04
 RUN apt-get update
 RUN apt-get install -y curl
 
-RUN curl -L $PARITY_DEB_URL > parity.deb
+RUN curl -L https://github.com/ethcore/parity/releases/download/v1.0.1/parity_linux_1.0.1-0_amd64.deb > parity.deb
 RUN dpkg -i parity.deb
 RUN rm parity.deb
 
